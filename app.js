@@ -7,6 +7,21 @@
 // Du kan se hvordan du styler hjemmesiden på mdn web docs.
 
 function sayHallo(){
-document.querySelector("h3").textContent = "Hej " + document.querySelector("input").value;
+document.querySelector("h3").textContent = "Hej " + 
+document.querySelector("#navn").value;
 }
-document.querySelector("button").addEventListener("click", sayHallo);
+function sayAge(){
+if (document.querySelector("#alder").value <30)
+    document.querySelector("h4").textContent =
+     document.querySelector("#alder").value+ ", hold da op du ung ";
+else document.querySelector("h4").textContent = 
+document.querySelector("#alder").value + ", okay! Næsten halvvejs gennem livet hva?";
+}
+function sayEmail(){
+    document.querySelector("#email").textContent = "Tak for det";
+}
+
+
+document.querySelector("#okNavn").addEventListener("click", sayHallo);
+document.querySelector("#okAlder").addEventListener("click", sayAge);
+document.querySelector("okMail").addEventListener("click", sayEmail);
